@@ -10,18 +10,9 @@ def son_anagramas(palabra1, palabra2):
     # Ordenamos ambas palabras y comparamos si son iguales
     return sorted(palabra1) == sorted(palabra2)
 
-# Ejemplo de uso
+
 palabra1 = "iman"
 palabra2 = "mani"
-
-if son_anagramas(palabra1, palabra2):
-    print(f"{palabra1} y {palabra2} son anagramas.")
-else:
-    print(f"{palabra1} y {palabra2} no son anagramas.")
-
-# Otro ejemplo
-palabra1 = "anitalavalatina"
-palabra2 = "anitalavalatani"
 
 if son_anagramas(palabra1, palabra2):
     print(f"{palabra1} y {palabra2} son anagramas.")
