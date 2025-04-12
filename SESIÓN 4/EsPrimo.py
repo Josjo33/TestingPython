@@ -1,6 +1,5 @@
 import math
 
-
 def EsPrimo (number):
     if number <= 1 or (number%2) == 0 :
         return False
@@ -13,5 +12,8 @@ def check(n):
     print("EsPrimo(" + str(n) + ") = " + str(EsPrimo(n)))
 
 check(1)
-check(2)
+
 check(3)
+
+#AGREGUE UN CASO ERRARO A PROPOSITO
+check(2)
