@@ -15,11 +15,11 @@ def stats(lst):
 
     lst_sorted = sorted(lst)
     if len(lst_sorted) % 2 == 0:
-        middle = len(lst_sorted) / 2  
+        middle = len(lst_sorted) / 2
         median = (lst_sorted[middle] + lst_sorted[middle - 1]) / 2
     else:
         middle = len(lst_sorted) / 2  
-        median = lst_sorted[int(middle)]  
+        median = lst_sorted[int(middle)]
 
     mode_times = None
     for i in freq.values():
@@ -38,5 +38,36 @@ def stats(lst):
     print("mode(s) = " + str(mode))
 
 def test():
-    # Aquí puedes agregar tus casos de prueba
-    pass
+    # Prueba con lista impar
+    print("Prueba 1: Lista impar")
+    stats([1, 2, 3, 4, 5])  # Mínimo, máximo, mediana (impar), una moda
+
+    # Prueba con lista par
+    print("\nPrueba 2: Lista par")
+    stats([1, 2, 2, 3, 3, 4])  # Mínimo, máximo, mediana (par), dos modas
+
+    # Prueba con todos los elementos iguales
+    print("\nPrueba 3: Todos iguales")
+    stats([7, 7, 7, 7])  # Mínimo, máximo, mediana, una moda (todos iguales)
+
+    # Prueba con lista de un solo número
+    print("\nPrueba 4: Lista con un solo número")
+    stats([42])  # Mínimo, máximo, mediana (solo un elemento), una moda
+
+    # Caso para verificar la mediana en una lista par
+    print("\nPrueba 5: Lista par con mediana correcta")
+    stats([1, 2, 3, 4, 5, 6])  # Lista par, la mediana debe ser 3.5
+
+    # Caso para verificar la mediana en una lista con un número impar de elementos
+    print("\nPrueba 6: Lista con mediana en número impar")
+    stats([10, 20, 30, 40, 50])  # La mediana debe ser 30
+
+    # Caso con lista con elementos negativos
+    print("\nPrueba 7: Lista con elementos negativos")
+    stats([-10, -5, 0, 5, 10])  # La mediana debe ser 0
+
+    # Caso con lista con números flotantes
+    print("\nPrueba 8: Lista con números flotantes")
+    stats([1.5, 2.5, 3.5, 4.5, 5.5])  # La mediana debe ser 3.5
+
+test()
