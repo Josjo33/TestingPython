@@ -15,10 +15,10 @@ def stats(lst):
 
     lst_sorted = sorted(lst)
     if len(lst_sorted) % 2 == 0:
-        middle = len(lst_sorted) / 2
-        median = (lst_sorted[middle] + lst_sorted[middle - 1]) / 2
+        middle = len(lst_sorted) // 2
+        median = (lst_sorted[middle] + lst_sorted[middle - 1]) // 2
     else:
-        middle = len(lst_sorted) / 2  
+        middle = len(lst_sorted) // 2  
         median = lst_sorted[int(middle)]
 
     mode_times = None

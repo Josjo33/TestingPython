@@ -18,4 +18,4 @@ def check(n):
 check(1)
 check(3)
 check(2)
-check(4)
+check(4)    
